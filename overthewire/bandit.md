@@ -30,9 +30,9 @@ Use quotation marks when specifying long filenames or paths with spaces.
 
 bandit3 : aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
 
-Show all hidden files with the ```-A``` option. 
+Show all hidden files with the ```-a``` option. The ```-a``` option tells the system not to ignore entries starting with ```.```.
 
-    ls -A ./inhere
+    ls -a ./inhere
 
 Read the hidden file:
 
@@ -41,3 +41,17 @@ Read the hidden file:
 ## Bandit 4 -> 5
 
 bandit4 : 2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
+
+Use the ```file``` command to see what types of files there are. 
+
+    cd inhere
+    file -- *
+
+```-file07``` is th eonly one that is ASCII text. 
+
+    cat ./-file07
+
+## Bandit 5 -> 6
+
+bandit 5 : lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+
