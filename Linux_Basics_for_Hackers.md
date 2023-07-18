@@ -1,4 +1,4 @@
-# Getting Stated with the Basics
+<h1 style="text-align: center">Getting Stated with the Basics</h1>
 
 ## The Linux Filesystem
 
@@ -64,7 +64,7 @@ When copying the new file, renaming is optional.
     rmdir [directoryname] remove directory (must be empty)
     rmdir -r [directoryname] - removes directory even with file in it
 
-## Text Manipulation
+<h1 style="text-align: center">Text Manipulation</h1>
 
     head [filename] - by default, show the first 10 lines of a file
     head -20 [filename] - display the first 20 lines
@@ -74,4 +74,28 @@ When copying the new file, renaming is optional.
 ## Numbering Lines
 
     nl [directory location] - provide line numbers (nl paswd)
+    sed - stream editor; find and replace
 
+For working with larger files you have the ```more``` and ```less``` commands.
+
+    more [filename] - display a page of the file at a time, page through with ENTER
+    less [filename] - adds ability to filter output by terms
+        / - provides prompt to search for keywords
+        n - goes to the next occurence of the pattern
+
+<h1 style="text-align: center"></h1>
+
+
+
+
+
+<h1 style="text-align: center"></h1>
+<h1 style="text-align: center"></h1>
+<h1 style="text-align: center"></h1>
+<h1 style="text-align: center"></h1>
+<h1 style="text-align: center"></h1>
+<h1 style="text-align: center"></h1>
+<h1 style="text-align: center"></h1>
+<h1 style="text-align: center"></h1>
+<h1 style="text-align: center"></h1>
+<h1 style="text-align: center"></h1>
