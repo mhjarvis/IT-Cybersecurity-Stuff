@@ -69,7 +69,8 @@ When copying the new file, renaming is optional.
     head [filename] - by default, show the first 10 lines of a file
     head -20 [filename] - display the first 20 lines
     tail [filename] - last 10 lines of a file
-    tail -20 [filename] 0 display the last 20 lines
+    tail -20 [filename] - display the last 20 lines
+    tail -n -20 [filename] - same as above
 
 ## Numbering Lines
 
@@ -83,7 +84,9 @@ For working with larger files you have the ```more``` and ```less``` commands.
         / - provides prompt to search for keywords
         n - goes to the next occurence of the pattern
 
-<h1 style="text-align: center"></h1>
+<h1 style="text-align: center">Analyzing and Managing Networks</h1>
+
+    ifconfig - query your active network connections
 
 
 
