@@ -64,5 +64,14 @@ When copying the new file, renaming is optional.
     rmdir [directoryname] remove directory (must be empty)
     rmdir -r [directoryname] - removes directory even with file in it
 
-# Text Manipulation
+## Text Manipulation
+
+    head [filename] - by default, show the first 10 lines of a file
+    head -20 [filename] - display the first 20 lines
+    tail [filename] - last 10 lines of a file
+    tail -20 [filename] 0 display the last 20 lines
+
+## Numbering Lines
+
+    nl [directory location] - provide line numbers (nl paswd)
 
