@@ -55,8 +55,24 @@ Use the ```file``` command to see what types of files there are.
 
 bandit5 : lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
 
-    find -size 1033c -type f
+    find -size 1033c -type f ! -executable
 
 ## Bandit 6 -> 7
 
 bandit6 : P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+
+Use ```2>/dev/null``` to hide all error messages in the output. 
+
+    find -size 33c -group bandit6 -user bandit7 2>/dev/null
+
+## Bandit 7 -> 8
+
+bandit7 : z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
+
+Use grep to filter content via piping.
+
+    cat data.txt | grep millionth
+
+## Bandit 8 -> 9
+
+bandit8 : TESKZC0XvTetK0S9xNwm25STk5iWrBvP
