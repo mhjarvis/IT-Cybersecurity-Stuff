@@ -53,5 +53,10 @@ Use the ```file``` command to see what types of files there are.
 
 ## Bandit 5 -> 6
 
-bandit 5 : lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+bandit5 : lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
 
+    find -size 1033c -type f
+
+## Bandit 6 -> 7
+
+bandit6 : P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
