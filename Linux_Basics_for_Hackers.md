@@ -87,12 +87,61 @@ For working with larger files you have the ```more``` and ```less``` commands.
 <h1 style="text-align: center">Analyzing and Managing Networks</h1>
 
     ifconfig - query your active network connections
+        inet - IP address currently assigned to network interface
+        broadcast - address used to send out info to all IPs on the subnet
+        netmask - determines what part of the IP aaddress is connected to local network
+
+```ifconfig``` also shows the loopback address (called ```lo```), also called ```localhost```. This is a special software address that connects you to your own system. Software and services that are not running on your system cannot use it. It would be used to test something on your system, such as your own web server.
+
+    iwconfig - gets information on wireless adapters
+        Access Point - how its connected to internet (router MAC)
+
+## Changing Your IP Address
+
+    ifconfig [interfacetochange - eth0] [newIP] 
+    ifconfig eth0 192.168.181.115 - will need to be in super user mode
+
+## Changing Netork Mask and Broadcast Address
+
+    ifconfig wlan0 192.168.111.111 netmask 255.255.0.0 broadcast 192.168.1.255
+
+This will trigger a new command prompt at which point you enter ifconfig again to verify that each parameter has changed correctly.
+
+## Spoofing Your MAC Address
+
+    ifconfig eth0 down - take down interface
+    ifconfig eth0 h2 ether 00:11:22:33:44:55 - hw for hardware or ether for Ethernet
+    ifconfig eht0 up - bring interface back up
+
+## Assigning New IP Address via DHCP
+
+Dynamic Host Configuration Protocol is used to automatically assign IP addresses to hosts. In small networks, a router might do this. A ISP will also use DHCP to assign IP addresses (which your router will normally get). DHCP also keeps a log file that tracks what IP address is assigned to a system.
+
+IF you are setting a static IP address, you must then return and get a new DHCP-assigned IP address. 
+
+You make a call to DHCP with ```dhclient``` followed by the interface you want th address assigned to.
+
+    dhclient -r wlan0 - removes any leases you currently have
+
+    dhclient wlan0 - reissue IP address
+
+## Examining DNS with ```dig```
+Getting DNS information can be valuable in early-on exploration and information gathering. 
+
+    dig hackers-arise.com ns
+    dig hackers-arise.com mx - mx option is for mail exchange
+
+<h1 style="text-align: center">Adding and Removing Software</h1>
 
 
 
 
 
-<h1 style="text-align: center"></h1>
+
+
+
+
+
 <h1 style="text-align: center"></h1>
 <h1 style="text-align: center"></h1>
 <h1 style="text-align: center"></h1>
