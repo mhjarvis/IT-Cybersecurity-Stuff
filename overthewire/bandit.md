@@ -76,3 +76,27 @@ Use grep to filter content via piping.
 ## Bandit 8 -> 9
 
 bandit8 : TESKZC0XvTetK0S9xNwm25STk5iWrBvP
+
+First, use ```sort``` with the ```-n``` option to sort based on numerical values. Then, we can pipe it into the ```uniq``` command. With the ```-u``` option, we will print only the uniq value.
+
+    sort -n data.txt | uniq -u
+
+## Bandit 9 -> 10
+
+bandit9 : EN632PlfYiZbn3PhVK3XOGSlNInNE00t
+
+```strings``` will print the printable character sequences that are at least 4 characters long. We know that there are several '=' characters preceeding it, so we could pipe the result of ```strings``` to ```grep``` and simply search for that sequence. 
+
+    strings data.txt | grep ===*
+
+## Bandit 10 -> 11
+
+bandit10 : G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+
+```base64``` can encode or decod a file or standard input/output. Use the ```-d``` option to decode data. 
+
+    base64 -d data.txt
+
+## Bandit 11 -> 12
+
+bandit11 : 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
