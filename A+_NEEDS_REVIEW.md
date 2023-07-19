@@ -37,3 +37,10 @@
 - IMEI and IMSI differences
 - What is MDM
 
+## Chapter 5
+- Three-way handshake
+- What is flow control in regards to TCP?
+- HTTP default Port i 80
+- HTTPS default Port is 443
+- Review SMTP, POP3, IMAP and know their ports
+- 
