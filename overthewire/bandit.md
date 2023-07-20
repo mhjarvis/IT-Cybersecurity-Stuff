@@ -149,3 +149,14 @@ Use the ```-i``` option to log into the server with the private key.
 ## Bandit 14 -> 15
 
 bandit14 : fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq
+
+    nc localhost 30000
+    fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq
+
+Another approach is to use ```telnet``` to connect. Do so by inputing the ```localhost``` and port number:
+
+    telnet localhost 30000
+
+## Bandit 15 -> 16
+
+bandit15 : jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
