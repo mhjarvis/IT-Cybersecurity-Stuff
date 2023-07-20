@@ -1,3 +1,5 @@
+# Logon
+ssh -p 2220 bandit1@bandit.labs.overthewire.org
 
 ## Bandit 0 -> 1
 
@@ -100,3 +102,38 @@ bandit10 : G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
 ## Bandit 11 -> 12
 
 bandit11 : 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
+
+```tr``` will allow us to pick and choose how to translate lowercase/uppercase values. In this case, we offset everything by 13 letters. 
+
+    cat data.txt | tr '[a-zA-Z]' '[n-za-mN-ZA-M]'
+
+## Bandit 12 -> 13
+
+bandit12 : JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
+
+Create a directory under ```tmp``` and copy the file into the new directory to work with. 
+
+    mkdir /tmp/marku
+    cp data.txt /tmp/marku
+    cd /tmp/marku
+
+We can reverse the hexdump and revert it to a new file:
+
+    xxd -revert original.txt > test
+    file test           // gzip compressed data, was 'data2.bin'
+
+Continue the decompression, checking the file each time.
+
+    mv test data.gz     // rename into gzip file type
+    gzip -d data.gz     // unzip - gives us a data file
+
+The file has been compressed multiple times using multiple compression methods. Continue to decompress each file, check what type of file each is and how it was decompressed, until finally you get the ASCII text file as a result. 
+
+    bzip2 -dc data > test   // using bzip2 for decompression
+    gzip -d 1.gz            // using gzip for decompression
+    tar -xf [filename]      // using tar for decompression
+
+
+## Bandit 13 -> 14
+
+bandit13 : wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw
