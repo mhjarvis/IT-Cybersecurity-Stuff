@@ -137,3 +137,15 @@ The file has been compressed multiple times using multiple compression methods. 
 ## Bandit 13 -> 14
 
 bandit13 : wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw
+
+Begin by getting the RSA key.
+
+    cat sshkey.private
+
+Use the ```-i``` option to log into the server with the private key.
+
+    ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
+
+## Bandit 14 -> 15
+
+bandit14 : fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq
