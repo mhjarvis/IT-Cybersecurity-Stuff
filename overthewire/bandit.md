@@ -157,6 +157,8 @@ Another approach is to use ```telnet``` to connect. Do so by inputing the ```loc
 
     telnet localhost 30000
 
+```telnet``` is short for Telecommunication network. It provides remote access to other hosts using the CLI. It normally uses port 23, however, keep in mind that it is insecure and a deprecated protocol. ```telnet``` sends all data in clear text, including usernames and passwords. 
+
 ## Bandit 15 -> 16
 
 bandit15 : jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
