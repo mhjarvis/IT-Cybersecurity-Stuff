@@ -1,4 +1,4 @@
-<h1 style="text-align: center">Getting Stated with the Basics</h1>
+<h1 style="text-align:center">Getting Stated with the Basics</h1>
 
 ## The Linux Filesystem
 
