@@ -216,3 +216,20 @@ Create a new directory /tmp/key and save the key there. Then we can ssh into the
 ## Bandit 17 -> 18
 
 bandit17 : VwOSWtCA7lRKkTfbr2IDh6awj9RNZM5e
+
+```diff``` allows us to compare files line by line. 
+
+    diff [OPTION]... [FILES]
+
+    diff --normal passwords.new passwords.old
+
+We get the following output and will want the first password presented since this is the change in the password.new file.
+
+    42c42
+    < hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg
+    ---
+    > glZreTEH1V3cGKL6g4conYqZqaEj0mte
+
+## Bandit 18 -> 19
+
+bandit18 : hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg
