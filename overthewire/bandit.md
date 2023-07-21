@@ -233,3 +233,13 @@ We get the following output and will want the first password presented since thi
 ## Bandit 18 -> 19
 
 bandit18 : hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg
+
+    ssh -p 2220 -t bandit18@bandit.labs.overthewire.org /bin/sh
+
+or
+
+    ssh -p 2220 bandit18@bandit.labs.overthewire.org "cat ~/readme"
+
+## Bandit 19 -> 20
+
+bandit19 : awhqfNnAbc1naukrpqDYcF95h7HoMTrC
