@@ -133,21 +133,77 @@ Getting DNS information can be valuable in early-on exploration and information 
 
 <h1 style="text-align: center">Adding and Removing Software</h1>
 
+## Installing Software with ```apt-get```
+
 For Debian-based distros (e.g. Kali, Ubuntu), Advanced Packaging Tool (apt) is the default. ```apt-get``` is the primary command. 
 
     apt-cache search [keyword]          // check whether the package is in your repo
     apt-get install [packagename]       // install software
     apt-get remove [packagename]        // uninstall
     apt-get purge [packagename]         // remove config files as well
+    apt autoremove [packagename]        // remove dependencies
+
+    apt-get update                      // check for updates
+    apt-get upgrade                     // upgrade your system 
+
+## Your ```sources.list``` File
+
+```sources.list``` notes what repositories your system will search for software. Here you can add additional repositories to search through. 
+
+    cd /etc/apt/sources.list        // located in /etc which contains config files
+
+## Installing Software with ```git```
+
+    git clone [github URL]      // copies all data/files from repo to your system
+
+<h1 style="text-align: center">Controlling File and Directory Permissions</h1>
+
+## File Permissions
+
+    chown [username] [filelocation]     // change user ownership of a file
+    chgrp [groupname] [filelocation]    // change group ownership of a file
+
+    Binary  Octal   rwx
+    000     0       ---
+    001     1       --x
+    010     2       -w-
+    011     3       -wx
+    100     4       r--
+    101     5       r-x
+    110     6       rw-
+    111     7       rwx
+
+```chmod``` uses the above octal values to change file permissions for the owner, group, and everyone else (other).
+
+    chmod [owner group other] [filename]
+    chmod 777 test.txt               // give everyone  rwx permissions
+     
+File permissions can also be changed with UGO (user, group, others) syntax.     
+
+    u = user
+    g = group
+    o = other
+
+    - remove permission
+    + add permission
+    = set permission
+
+    chmod u-w test.txt          // user remove write permission
+    chmod u+x, o+x test.txt     // multiple permission changes
+
+When downloading neww tool, keep in mind that Linux will assign all files/permissions default permissions of ```666``` (for files) and ```777``` (for directories). To fix this problem, you will need to give yourself root access and update thesse permissions.
+
+## Masks
+
+You can change the default permissions allocated to files and directories with the ```umask``` method. This allows you to remove permissions from the base permissions. The ```umask``` number is subtracted from the permissions number to give the new permission status. 
+
+    umask                       // show the current unmask number
+    /home/username/.profile     // file to edit the umask value in
+
+## Special Permissions
 
 
 
-
-
-
-
-
-<h1 style="text-align: center"></h1>
 <h1 style="text-align: center"></h1>
 <h1 style="text-align: center"></h1>
 <h1 style="text-align: center"></h1>
