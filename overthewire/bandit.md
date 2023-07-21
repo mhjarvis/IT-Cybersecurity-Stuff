@@ -243,3 +243,10 @@ or
 ## Bandit 19 -> 20
 
 bandit19 : awhqfNnAbc1naukrpqDYcF95h7HoMTrC
+
+    file bandit20-do        // type of file is setuid
+    ./bandit20-do cat /etc/bandit_pass/bandit20
+
+## Bandit 20 -> 21
+
+bandit20 : VxCazJaVykI6W36BkBU0mJTCM8rR95XT
