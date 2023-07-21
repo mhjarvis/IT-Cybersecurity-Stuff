@@ -133,7 +133,12 @@ Getting DNS information can be valuable in early-on exploration and information 
 
 <h1 style="text-align: center">Adding and Removing Software</h1>
 
+For Debian-based distros (e.g. Kali, Ubuntu), Advanced Packaging Tool (apt) is the default. ```apt-get``` is the primary command. 
 
+    apt-cache search [keyword]          // check whether the package is in your repo
+    apt-get install [packagename]       // install software
+    apt-get remove [packagename]        // uninstall
+    apt-get purge [packagename]         // remove config files as well
 
 
 
