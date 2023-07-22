@@ -202,6 +202,15 @@ You can change the default permissions allocated to files and directories with t
 
 ## Special Permissions
 
+Set the ```SUID``` with a `4` before the regular permissions, which gives any user the permission to execute the file with the permissions of the owner. 
+
+    chmod 4664 [filename]       // set SUID with a '4'
+    chmod 2664 [filename]       // set SGID with a '2'
+
+These are sometimes set by developers, especially for files that interact with root privelages a lot, which may lead to privelage escalation.
+
+
+
 
 
 <h1 style="text-align: center"></h1>
