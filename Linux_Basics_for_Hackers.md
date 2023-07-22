@@ -209,11 +209,30 @@ Set the ```SUID``` with a `4` before the regular permissions, which gives any us
 
 These are sometimes set by developers, especially for files that interact with root privelages a lot, which may lead to privelage escalation.
 
+# <h1 style="text-align: center">Process Management</h1>
+
+Understanding how to find processes amongst the hundreds of processes running simultaneously is a critical skill. Think of finding the anti-virus process and terminating it. 
+
+## Viewing Processes
+```ps``` displays information about a selection of the active processes. ```top``` instead provides a repetitive update of the selection. 
+
+    ps              // reports a snapshot of the current processes
+
+Note that the ```PID``` (first column) is a unique process ID that is assigned sequentially as processes are run. 
+
+    ps aux          // shows all processes running on the system for all users
+
+Note:
+- ```User``` - the user who invoked the process
+- ```PID```  - the process ID
+- ```%CPU``` - the percent of CPU this process is using
+- ```%MEM``` - the percent of memory this process is using
+- ```COMMND``` - the name of the command that started the process
 
 
 
 
-<h1 style="text-align: center"></h1>
+
 <h1 style="text-align: center"></h1>
 <h1 style="text-align: center"></h1>
 <h1 style="text-align: center"></h1>
