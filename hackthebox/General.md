@@ -32,3 +32,11 @@ Using passive mode for data transfers allows use of ftp in environments where a 
 ## Dancing
 
 SMB or Server Message Block is another way to transfer files betwween two hosts. This protocol provides shared access to files, printers, and serial ports betwween endpoints. We mostly see this on Windows machines. Usually this means port 445 TCP will be open. SMB usually runs at the Application or Presentation layer. It is used most often ith NetBIOS over TCP/IP (NBT) which works on the Transport layer. 
+
+SMB allows applications (or the user) access files at a remote server, along with other resources such as printers. It can read, create, and update files on that remote server. SMB-enabled storage on the network i called a ```share```. If someone has the address of the server and proper credentials, they have access. Admins may make mistakes here and accidentally allow logins without any valid credentials (or by using ```gues accounts``` or ```anonymous log-ons```). SMB is on port 445. 
+
+SMB authentication always requires a username and will use your host machines name if you do not give it one.
+
+    sudo smbclient -L {target_IP}
+    sudo smbclient \\\\{target_IP}\\{username}
+    sudo 
