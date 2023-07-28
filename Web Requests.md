@@ -27,4 +27,6 @@ To view the full HTTP request:
 
     -I                                      // HEAD request; display the response headers
     -i                                      // display both the headers and the response body (HTML code)
-    
+    -H                                      // set request headers
+
+    curl {target_address} -A 'Mozilla/5.0'  // set User-Agent
