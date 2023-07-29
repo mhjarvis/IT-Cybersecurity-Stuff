@@ -67,3 +67,11 @@ Customization can happen in the shell's configuration file ```.bashrc```.
 * ```lsusb``` - lists usb devices.
 * ```lsof``` - lists opened files.
 * ```lspci``` - lists pci devices.
+
+## Navigation
+
+* ```cd```  - change directory.
+* ```ls``` - list directory contents.
+* ```clear``` - clean the shell; also can use ```CRTL + L```.
+
+## Working with Files and Directories
