@@ -82,4 +82,5 @@ Customization can happen in the shell's configuration file ```.bashrc```.
 * ```mv <file/dir> <renamed file/dir>``` - move (rename) files.
 * ```mv <file> <newfilename>``` - rename file by not specifying new directory.
 * ```cp <dir/filename> <newdir/filename>``` - copy files and directories.
-* 
+
+## 
