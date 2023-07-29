@@ -45,3 +45,6 @@ Important directories or paths in Linux include:
 * ```usr``` - executables, libraries, man files, etc.
 * ```var``` - variable files such as log files, email in-boxes, web app related files, cron files, etc.
 
+## Bash
+
+Customization can happen in the shell's configuration file ```.bashrc```.
