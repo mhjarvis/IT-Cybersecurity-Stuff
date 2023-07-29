@@ -55,5 +55,15 @@ Customization can happen in the shell's configuration file ```.bashrc```.
 * ```whoami``` - current username.
 * ```id``` - adds group membership and ids.
 * ```uname``` - print system information; ```-r``` can id the kernel for exploits.
-* ``````
-    
+* ```pwd``` - working directory.
+* ```ifconfig```- network interface.
+* ```ip``` - show or manipulate routing.
+* ```netstat``` - show network status.
+* ```ss``` - utility to investigate sockets.
+* ```ps``` - shows process status.
+* ```who``` - displays who is logged in.
+* ```env``` - prints environment or sets and executes command.
+* ```lsblk``` - lists block devices.
+* ```lsusb``` - lists usb devices.
+* ```lsof``` - lists opened files.
+* ```lspci``` - lists pci devices.
