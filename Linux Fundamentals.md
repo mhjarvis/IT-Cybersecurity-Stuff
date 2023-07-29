@@ -75,3 +75,11 @@ Customization can happen in the shell's configuration file ```.bashrc```.
 * ```clear``` - clean the shell; also can use ```CRTL + L```.
 
 ## Working with Files and Directories
+
+* ```tree``` - lists contents of a directory in a tree-like format.
+* ```touch <name>``` - change file timestamps; creates empty file if file does not exist.
+* ```mkdir <name>``` - make directories.
+* ```mv <file/dir> <renamed file/dir>``` - move (rename) files.
+* ```mv <file> <newfilename>``` - rename file by not specifying new directory.
+* ```cp <dir/filename> <newdir/filename>``` - copy files and directories.
+* 
