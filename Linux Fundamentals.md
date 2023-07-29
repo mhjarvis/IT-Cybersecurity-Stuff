@@ -48,3 +48,12 @@ Important directories or paths in Linux include:
 ## Bash
 
 Customization can happen in the shell's configuration file ```.bashrc```.
+
+## System Information
+
+* ```hostname``` - lists computer we are logged into.
+* ```whoami``` - current username.
+* ```id``` - adds group membership and ids.
+* ```uname``` - print system information; ```-r``` can id the kernel for exploits.
+* ``````
+    
