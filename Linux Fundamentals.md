@@ -83,4 +83,53 @@ Customization can happen in the shell's configuration file ```.bashrc```.
 * ```mv <file> <newfilename>``` - rename file by not specifying new directory.
 * ```cp <dir/filename> <newdir/filename>``` - copy files and directories.
 
-## 
+## Editing Files
+
+```vim``` or ```nano``` are often used for file editing. Note that the ```^``` caret stands for ```CTRL```. 
+
+* ```nano <filename>``` - opens nano editor and creates new file.
+* ```vim``` - open vim editor.
+
+```vim``` has a total of six fundamentaal modes that make working with it easier:
+
+1. ```Normal``` - all inputs are considered as editor commands. This is how ```vim``` starts usually.
+2. ```Insert``` - characters are entered into the buffer.
+3. ```Visual``` - used to mark a contiguous part of the text (highlighted); highlighted are can be deleted, copied, replaced, etc.
+4. ```Command``` - allows single-line command at bottom of editor; used for sorting, replacing text sections, or deleting them (e.g.). 
+5. ```Replace``` - newly entered text will overwrite existing text. 
+
+Vim has the following actions:
+
+### Moving, Editing, Exiting, Insertion, Appending
+* ```hjkl``` - move cursor.
+* ```:q!``` - exit vim, trash all changes.
+* ```:wq``` - exit vim and save changes.
+* ```x``` - delete a character at the cursor.
+* ```i``` - insert text before the cursor.
+* ```A``` - appendd after the line.
+### Deletion, Motions, Count with Motion, Count with Delete, Operating on Lines, Undo
+* ```dw``` - delete word (from the cursor up to the next word type).
+* ```d$``` - delete from the cursor to the end of a line type.
+* ```dd``` - delete the whole line.
+* ```2w``` - repeat a mothion based on the prepended number (2 in this case). 
+* ```operator number motion``` - change (operator = what to do), (number = count), (motion = moves over the text to operate on (e.g. w - word, $ - end of line)).
+* ```0``` - move to the start of the line.
+* ```u``` - undo previous action.
+* ```U``` - undo all the changes on a line.
+* ```CTRL-R``` - undo the undo's.
+### Put, Replace, Change, 
+* ```p``` - put previously deleted text after the cursor.
+* ```rx``` - replace; r sets the cursor, x is the letter to replace the current spot.
+* ```ce``` - change until the end of a word; type ```ce``` followed by the replaced text.
+* ```c number motion``` - format for change.
+### Location, Searching, Matching, Substitution
+* ```CTRL-G``` - display your location in the file and the file status.
+* ```G``` - moves to the end of the file.
+* ```[number] G``` - moves to a specific location in the file (number).
+* ```gg``` - moves to the first line.
+* ```/ [phrase]``` - searches FORWARD for the phrase.
+* ```? [phrase]``` - searches BACKWARD for the phrase. Type ```n``` to find next occurance or ```N``` to go in opposite direction.
+* ```CTRL-O``` - takes you back to older positions.
+* ```CRTL-I``` - takes you to newer positions.
+* ```%``` - when placed on a ```()```, ```[```, or ```{```, it will move to the matching one.
+* 
