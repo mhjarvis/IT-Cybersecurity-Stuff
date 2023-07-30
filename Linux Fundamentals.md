@@ -132,4 +132,27 @@ Vim has the following actions:
 * ```CTRL-O``` - takes you back to older positions.
 * ```CRTL-I``` - takes you to newer positions.
 * ```%``` - when placed on a ```()```, ```[```, or ```{```, it will move to the matching one.
-* 
+* ```:s/old/new``` - substitute new for the first old in a line type.
+* ```:s/old/new/g``` - substitute new for all 'old's on a line type.
+* ```:#,#s/old/new/g``` - substitute phrases between two line #'s type.
+* ```:%s/old/new/g``` - substitute all occurrences in the file type.
+* ```:%s/old/new/gc``` - ask for confirmation each time add 'c'.
+### Execute an External Command, Writing Files, Select Text to Write, Retriving/Merging
+* ```:![command]``` - execute the command inside Vim.
+* ```:w FILENAME``` - save the changes as the new filename.
+* ```v motion :w FILENAME``` - save part of the file.
+* ```:r FILENAME``` - retrives disk file FILENAME and puts it below the cursor position.
+* ```:r !dir``` - reads the output of the dir command and put it below the cursor position.
+### Open, Append, Replace, Copy/Paste, Set
+* ```o``` - open a line below the cursor and start Insert mode.
+* ```O``` - open a line above the cursor.
+* ```a``` - insert text after the cursor.
+* ```A``` - insert text after the end of the line.
+* ```e``` - command moves to the end of a word.
+* ```y``` - operator yanks (copies) text, p puts (pastes) it.
+* ```R``` - enters replace mode until ```ESC``` is pressed.
+* ```:set xxx``` - sets the option ```xxx```.
+* ```:set ic``` - ignore upper/lower case when searching.
+* ```:set is``` - show partial matches for a search phrase.
+* ```:set hls``` - highlight all matching phrases.
+* ```no``` - prepend to set a option off.
