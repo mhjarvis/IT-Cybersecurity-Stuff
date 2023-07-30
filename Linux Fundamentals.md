@@ -156,3 +156,11 @@ Vim has the following actions:
 * ```:set is``` - show partial matches for a search phrase.
 * ```:set hls``` - highlight all matching phrases.
 * ```no``` - prepend to set a option off.
+
+## Find Files and Directories
+
+* ```which``` - returns the path to the file/link that should be executed; check
+if a program exists.
+* ```find``` - find files/folders; can filter results (e.g. size, date, etc.).
+* ```locate``` - find files by name; to update the database ```locate``` uses, use ```sudo updatedb```.
+* ```2>/dev/null``` - hide permission denied files.
