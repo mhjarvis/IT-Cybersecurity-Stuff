@@ -4,6 +4,8 @@ Download the OpenVPN file.
 
     sudo openvpn {.ovpn_file}
 
+    sudo killall openvpn        // end all sessions
+
 ## Meow
 
 ```Enumeration``` - documenting the current state of the target to learn as much as possible about it. 
