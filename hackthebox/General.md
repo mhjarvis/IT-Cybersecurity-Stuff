@@ -6,6 +6,12 @@ Download the OpenVPN file.
 
     sudo killall openvpn        // end all sessions
 
+## Shells
+
+* ```Reverse shell``` -initiates a connection back to a 'listener' on our attack box.
+* ```Bind shell``` - binds to a specific port on the target host and waits for a connection from our attack box.
+* ```Web shell``` - runs os commands via the web browser, typically not interactive or semi-interactive.
+
 ## Meow
 
 ```Enumeration``` - documenting the current state of the target to learn as much as possible about it. 
