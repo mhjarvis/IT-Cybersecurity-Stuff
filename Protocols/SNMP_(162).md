@@ -1,22 +1,23 @@
-# <h1 style="text-align:center">File Transfer Protocol (FTP)</h1>
+# <h1 style="text-align:center">Simple Network Management Protocol (SNMP)</h1>
 
 ## Introduction
+```SNMP``` primarily uses UDP ports 161 and 162. Community strings can provide information/stats about a router or device. Manufacturer default community strings of ```public``` and ```private``` are often unchanged. 
 
-FTP or File Transfer Protocol is often misconfigured, especially when not correctly understood. FTP can be used to transfer log files from one network device to another (or a log collection server). If not secured, these logs can provide valuable information to allow someone to map out the network, enumerate usernames, detect active services, etc. FTP works on port 21. To better secure file transfer, you could move services to port 22 and use SSH to tunnel information and add encryption.
-
-    ftp {target_IP}         // will attempt to connect to the ftp server
-
-A typical misconfigured ftp service allows a ```anonymous``` account to access the service like any other authenticated user. This username can login with any password you want, since the service will disregard the passord for this specific account. 
-
-    ftp>: passive           // set passive mode
-    ftp>: get data.txt      // transfer file to your system
-
-Using passive mode for data transfers allows use of ftp in environments where a firewall prevents connections from the outside world back to the client machine (PASV).
 
 ## Helpful Commands
 
-* ```fpt -p <target IP>``` - connect to target ftp. 
+* ```snmpwalk -v 2c -c public <target_IP> ```
+* ```snmpwalk -v 2c -c private <target_IP>```
+
+* ```onesixtyone -c dict.txt <target_IP>``` - brute force community string
 
 ## Notes
 
-* FTP supports common commands such as ```cd``` and ```ls```. It also allows us to download files using the ```get``` command. 
+* In version 1 and 2c, access is controlled using a plaintext community string, and if you know the name, you can gain access to it. Encryption/authentication is only needed in SNMP v.3. 
+
+
+## See Also
+
+```snmpwalk```
+
+```onesixtyone``` - brute force community string names
