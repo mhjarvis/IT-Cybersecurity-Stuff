@@ -6,3 +6,6 @@ Netcat (ncat, nc) is a network utility for interacting with TCP/UDP ports. It is
     netcat 10.10.10.10 22                   // connect on port 22 (ssh)
 
 The responding port may send us a ```banner```, stating that a service is running on it. This technique is called ```Banner Grabbing``` which can help identify what service is running on that port. Netcat can also be used to transfer files between machines. 
+
+
+f
