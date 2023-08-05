@@ -6,3 +6,7 @@
 
     sudo apt install exploitdb -y           // install database
     searchsploit <exploit version>          // search for exploit / version
+
+## See Also
+
+* 
