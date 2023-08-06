@@ -30,5 +30,26 @@ Scripts can be run to enumerate the server. The following scripts create a lot o
 
 [Privilege Escalation Awesome Scripts SUITE (PEASS) - Windows/Linux](https://github.com/carlospolop/PEASS-ng)
 
-## Kernel Exploits
+## Kernel Exploits and Vulnerable Software
+
+Old operating systems may carry vulnerabilitiies, especially if they are unpatched. Note that kernel exploits can cause system instability. Also look for installed software as there are possibly public exploits on software, especially in older versions.
+
+* ```dpkg -l``` - show installed software on Linux.
+* ```C:\Program Files``` - see installed software on Windows.
+
+## User Privileges
+
+Users may have privileges. Common ways to exploit certain user privileges include:
+1. ```sudo``` - allows lower privileged users to execute as root without giving access to root.
+        
+        sudo -l                     // check what privilegas a user has
+        sudo su -                   // switch to root
+        sudo -u user <command>      // run command as user
+        
+2. SUID
+3. Windows Token Privileges
+
+[GTFOBins - list of commands and how they can be exploited through sudo.](https://gtfobins.github.io/)
+
+[LOLBAS - list of Windows applications that may be leveraged.](https://academy.hackthebox.com/module/77/section/844)
 
