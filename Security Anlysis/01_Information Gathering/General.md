@@ -6,3 +6,12 @@ It is common for sites to have a ```robots.txt``` file. This file instructs sear
 ## Source Code
 
 * ```CTRL + U``` - bring up webpage source code. 
+
+
+## ```traceroute```
+
+```traceroute``` can be used to map the path your request takes as it heads to a target machine. 
+
+    traceroute <destination>
+
+    
