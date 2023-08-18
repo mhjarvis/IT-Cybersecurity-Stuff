@@ -39,6 +39,11 @@ By default (without any options) Nmap will scan only the 1,000 most common ports
 
 The ```-sn``` switch tells Nmap not to scan any ports.
 
+## NSE Scripts
+Scripts extend the functionality of Nmap. To run a specific script use ```--script=<script_name>```. Multiple scripts can be run with a comma seperator.
+
+Scripts are stored at ```/usr/share/nmap/scripts```. A list can be found at [NMAP Scripts](https://nmap.org/nsedoc/). 
+
 ## Web Enumeration
 
 * ```nmap -sV --script=http-enum <target_IP>``` enumerates web directories used by popular web applications; [link](https://nmap.org/nsedoc/scripts/http-enum.html).
