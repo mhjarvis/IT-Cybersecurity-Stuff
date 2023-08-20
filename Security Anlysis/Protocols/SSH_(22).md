@@ -7,4 +7,7 @@ SSH uses a client-server model. SSH is typically more stable than a reverse shel
 
     ssh bob@10.10.10.10
 
-Its also possible to read local privaate keys on a compromised system or add our public key to gain SSH access to a specific user. 
+Its also possible to read local private keys on a compromised system or add our public key to gain SSH access to a specific user. 
+
+### Private Key
+If able to obtain a private key, after adding to your .ssh folder, it should be possible to log in as the user that ssh key belongs to.
