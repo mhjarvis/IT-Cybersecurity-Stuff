@@ -24,4 +24,5 @@ The core of any Windows Domain is the Active Directory Domain Service (AD DS), w
     * Domain Computers - includes all existing computers in the domain.
     * Domain Controllers - includes all existing DCs on the domain.
 
-* Organizational Units - container objects that allow you to classify user and machines. They are used to define sets of users with similar policing requirements. 
+### Organizational Units
+Container objects that allow you to classify user and machines. They are used to define sets of users with similar policing requirements. These objects are protected against accidental deletion, so you will need to enable the Advanced Features in the View menu. 
