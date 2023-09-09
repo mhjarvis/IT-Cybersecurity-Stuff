@@ -26,3 +26,12 @@ The core of any Windows Domain is the Active Directory Domain Service (AD DS), w
 
 ### Organizational Units
 Container objects that allow you to classify user and machines. They are used to define sets of users with similar policing requirements. These objects are protected against accidental deletion, so you will need to enable the Advanced Features in the View menu. 
+
+### Remote Password Reset
+For users with lower privilegas but with the ability to reset other user's passwords, we can force reset passwords using PowerShell:
+
+    Set-ADAccountPassword sophie -Reset -NewPassword (Read-Host -AsSecureString -Prompt 'New Password') -Verbose
+
+We can also force a password reset upon successful login (for sophie):
+
+    Set-ADUser -ChangePasswordAtLogon $true -Identity sophie -Verbose
