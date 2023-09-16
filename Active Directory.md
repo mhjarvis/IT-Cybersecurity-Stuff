@@ -35,3 +35,5 @@ For users with lower privilegas but with the ability to reset other user's passw
 We can also force a password reset upon successful login (for sophie):
 
     Set-ADUser -ChangePasswordAtLogon $true -Identity sophie -Verbose
+
+    
