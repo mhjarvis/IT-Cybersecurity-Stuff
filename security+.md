@@ -1,0 +1,134 @@
+# Security +
+
+# I. Today's Security Professional
+
+## Objectives of Cybersecurity
+
+The basic objectives of cybersecurity are confidentiality, integrity, and availability of your operations (the CIA triad). Security incidents occur when there is a breach of these security controls.
+
+### The CIA Triad
+
+- `Confidentiality` concerns itself with ensuring unauthorized individuals are not able to access sensitive information. This is achieved with security controls (firewalls, access control, encryption, etc.).
+
+- `Integrity` ensures there are no unauthorized modifications to information or systems (intentionally or unintentionally).
+
+- `Availability` - ensures information and systems are available for users at the time of request. This is achieved with controls such as fault tolerance, clustering, backups, etc.
+
+### Nonrepudiation
+
+`Nonrepudiation` is not part of the triad, but is important as it means that when someone performs some action, they cannot later deny having taken that action. These include digital signatures or some type of history monitoring.
+
+### The DAD Triad
+
+The DAD triad explains the three key threats to cybersecurity efforts, which are disclosure, alteration, and denial. These map directly to one of the goals of cybersecurity.
+
+- `Disclosure` is the exposure of information to unauthorized individuals (`data loss`). It is a violation of confidentiality. `Data exfiltration` is the removal of sensitive information. This can also happen accidentally.
+
+- `Alteration` is the unauthorized modification of information and the violation of integrity.
+
+- `Denial` is the disruption of an authorized user's access to information.
+
+### Breach Impact
+
+A security incident can impact an organization in several different ways. Risk can cross into more than one of the following categories.
+
+- `Financial Risk` is monetary damage (destruction, loss of information, trust/business).
+
+- `Reputational Risk` involves negative publicity, loss of goodwill among customers, employees, etc.
+
+- `Strategic Risk` the organization becomes less effective in meeting its major goals and objectives through loss of product, IP, etc. This risk is concerned with the very existence of an organization and its ability to execute its business plans.
+
+- `Operational Risk` is the ability to carry out day to day functions. This is more focused on inefficiency and delays within the organization.
+
+- `Compliance Risk` occurs when a breach causes a break in regulatory requirements (HIPPA, etc). This leads to sanctions and fines.
+
+## Implementing Security Controls
+
+An organization implements security controls to preserve the CIA triad. `Control Objectives` are statements of a desired security state an organization wishes to achieve. `Security Controls` are the actual measures that fulfill these security objectives.
+
+### Gap Analysis
+
+`Gap Analysis` are conducted to evaluate security controls. It is a review of control objectives and an examination of the controls designed to achieve those objectives. If there is a instance where a control does not meet the objective, there is a `gap`. These gaps should be treated as potential risks and remediated.
+
+### Security Control Categories
+
+There are four categories for security controls based on how they meet their objective.
+
+- `Technical controls` - enforce the CIA triad via digital space (firewall rules, access control).
+
+- `Operational controls` - the processes put in place to manage technology in a secure manner (user access reviews, log monitoring, vulnerability management).
+
+- `Managerial controls` - the mechanics of the risk management process (periodic risk assessments, security planning exercises).
+
+- `Physical controls` - fences, lighting, locks, fire suppression system, alarms.
+
+### Security Control Types
+
+Security controls are also divided into types based on their desired effects.
+
+- `Preventive controls` intend to stop a security issue before it occurs (firewalls and encryption).
+
+- `Deterrent controls` prevent an attacker from attempting to violate a security policy (guard dogs or security).
+
+- `Detective controls` identify security events that have already occurred (IDS).
+
+- `Corrective controls` remediate security issues that have already occurred (restoring backups after an attack).
+
+- `Compensating controls` are designed to mitigate risk associated with exceptions made to a security policy.
+
+- `Directive controls` inform employees and others what they should do to achieve security objectives (policies and procedures).
+
+## Data Protection
+
+Data exists at three main states.
+
+- `Data at rest` is data stored on hard drives, tapes, in the cloud, etc. Prone to theft by insiders or external attackers who gain access.
+
+- `Data in transit` is data that is in motion/transit over a network. At risk especially over untrusted network.
+
+- `Data in use` is data that is actively in use by a system.
+
+Different security controls can be applied to help safeguard data in all of these states.
+
+### Data Encryption
+
+Use encryption to prevent information being exposed.
+
+### Data Loss Prevention
+
+DLP systems help enforce policies and procedures to prevent loss / theft. These search systems for sensitive information. `Agent-based DLP` uses software agents installed on systems that search those systems for sensitive information. Can also monitor system configuration and user actions, blocking undesirable actions (blocking USBs). `Agentless (network-based) DLP` systems sit on the network and monitor out-bound network traffic. These watch for unencrypted transmissions, blocking them.
+
+DLP systems use `pattern matching`, watching for telltale signs of sensitive information (credit card numbers, socials). They also use `watermarking`, where electronic tags are applied to sensitive documents which the system monitors for (unencrypted content containing those tags) (think DRM).
+
+### Data Minimization
+
+Data minimization techniques seek to reduce risk by reducing the amount of sensitive information that we maintain on a regular basis. Destruction of data no longer needed is best. `Deidentification` is the process that removes the ability to link data back to an individual, reducing sensitivity. `Data obfuscation` is the process of transforming data into a format where the original information cant be retrieved. Data obfuscation includes:
+
+- `Hashing` which uses a function to transform a value in a dataset to a corresponding hash value. Vulnerable to a `rainbow table attack` where a attacker computes hashes of candidate values and checks them to see if those hashes exist in the file.
+- `Tokenization` replaces sensitive values with a unique identifier using a lookup table (this needs to take into account securing the lookup table).
+- `Masking` partially redacts sensitive information by replacing some or all sensitive fields with blank characters (think credit cards).
+
+### Access Restrictions
+
+`Access restrictions` are security measures that limit the ability of individuals or systems to access sensitive information or resources.
+
+- `Geographic restrictions` limit access to resources based on the physical location of the user or system.
+- `Permission restrictions` limit access based on the user's role or level of authorization.
+
+### Segmentation and Isolation
+
+Access can be limited by placing sensitive systems on different parts of the network. `Segmentation` places sensitive systems on separate networks where they can still communicate with each other but have severe restrictions. `Isolation` goes further by completely cutting off access to outside networks.
+
+## Summary
+
+1. The three core objectives of cybersecurity are confidentiality, integrity, and availability.
+2. Nonrepudiation prevents someone from denying that they took an action.
+3. Security controls may be categorized based on their mechanism of action and their intent.
+4. Data breaches have significant and diverse impacts on organizations.
+5. Data must be protected in transit, at rest, and in use.
+6. Data loss prevention systems block data exfiltration attempts.
+7. Data minimization reduces risk by reducing the amount of sensitive information that we maintain.
+
+a, b, c, b, d, d, b, a, d, a, c, a, d, d, d, a, c, b, a, a
+
+d, b, c, b, d, d, b, a, d, a, c, a, d, d, d, a, c, b, a, a
