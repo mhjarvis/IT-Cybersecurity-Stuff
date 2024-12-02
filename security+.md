@@ -132,3 +132,35 @@ Access can be limited by placing sensitive systems on different parts of the net
 a, b, c, b, d, d, b, a, d, a, c, a, d, d, d, a, c, b, a, a
 
 d, b, c, b, d, d, b, a, d, a, c, a, d, d, d, a, c, b, a, a
+
+# II. Cybersecurity Threat Landscape
+
+## Exploring Cybersecurity Threats
+
+Threat actors come in various levels of skills and capabilities.
+
+### Classifying Cybersecurity Threats
+
+There are several characteristics which can be used to differentiate between the types of threat actors.
+
+`Internal vs External` - threats can also come from within the organization.
+`Level of Sophistication / Capability` - threat actors vary greatly in their level of cybersecurity sophistication and capability.
+`Resources / Funding` - funding can range from organized crime / government sponsorship to hobbyists with no funding.
+`Intent / Motivation` - from simple thrills to corporate espionage to political objectives.
+
+They types of 'hats' attackers wear vary.
+
+`White-hat` hackers or authorized hackers are those that act with authorization to discover vulnerabilities.
+`Black-hat` hackers are those with malicious intent.
+`Gray-hat` hackers are those who fall somewhere in between.
+
+### Threat Actors
+
+- `Unskilled Attackers` or `script kiddie` are those that use hacking techniques but have limited skill. They rely on automated tools they download from the internet. They are generally less discriminating in their targeting selections. Motivation is based on proving their skill.
+
+- `Hacktivists` use hacking techniques to accomplish some activist goal. They believe they are motivated by the greater good. They are more motivated than unskilled attackers and may even risk getting caught to get their goals (this may be a badge of honor). Skill varies widely, but there is reason to believe some are actual cybersecurity professionals, posing a significant danger. Resources can vary significantly as well (Anonymous is an example). These can be internal actors that disagree with their companies policies (government employees, whistleblowers)(think Edward Snowden).
+
+- `Organized Crime` appears when there is money to be made. The common thread in these groups is motivation and intent (illegal financial gain). There is usually no political type motivation and these organizations tend to stay in the shadows. They are active in many sectors: - cyber-dependent crime - child sexual abuse material - online fraud - dark web - cross-cutting crime factors
+  Organized crime is usually moderately skilled to highly skilled. Resources are bigger in terms of time and money.
+
+- `Nation-State Attackers`
