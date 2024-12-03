@@ -18,7 +18,7 @@ The Pyramid of Pain is a conceptual model developed by security expert David J. 
 
 7. TTPs (Tough) - The overall methods and approaches used by attackers to achieve their goals. Disrupting TTPs requires attackers to rethink their entire strategy, causing the highest level of pain and disruption.
 
-## Cyber Kill-Chain
+## Cyber Kill f34fChain
 
 A model developed by Lockheed Martin to describe the stages of a cyberattack, providing a framework for understanding the various phases an attacker goes through when executing a cyberattack. It helps organizations identify potential weaknesses in their defense strategy and better respond to intrusions.
 
@@ -35,3 +35,26 @@ A model developed by Lockheed Martin to describe the stages of a cyberattack, pr
 6. Command & Control - The attacker establishes communication with the compromised system to send commands or exfiltrate data.
 
 7. Actions on Objectives - attacker achieves their final goal which could be data theft, system disruption, or other malicious objectives.
+
+## Unified Kill Chain
+
+The Unified Kill Chain is used to help understand how cyber attacks occur. It consists of 18 phases that comprise an attack.
+
+1. `Reconnaissance`
+2. `Weaponization`
+3. `Delivery`
+4. `Social Engineering`
+5. `Exploitation`
+6. `Persistence`
+7. `Defense Evasion`
+8. `Command and Control`
+9. `Pivoting`
+10. `Discovery`
+11. `Privilege Escalation`
+12. `Execution`
+13. `Credential Access`
+14. `Lateral Movement`
+15. `Collection`
+16. `Exfiltration`
+17. `Impact`
+18. `Objectives`

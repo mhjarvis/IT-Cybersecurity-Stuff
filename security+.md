@@ -163,4 +163,38 @@ They types of 'hats' attackers wear vary.
 - `Organized Crime` appears when there is money to be made. The common thread in these groups is motivation and intent (illegal financial gain). There is usually no political type motivation and these organizations tend to stay in the shadows. They are active in many sectors: - cyber-dependent crime - child sexual abuse material - online fraud - dark web - cross-cutting crime factors
   Organized crime is usually moderately skilled to highly skilled. Resources are bigger in terms of time and money.
 
-- `Nation-State Attackers`
+- `Nation-State Attackers` may be state sponsored. `Advanced Persistent Threats` applies here. Nation-States are able to use advanced techniques, stay persistent in their attacks over a significant amount of time, and continued attacks for possibly years. Hackers are highly skilled with significant resources. Motivation is both political and / or economic. `Zero-day` attacks are often used, vulnerabilities that have not been patched nor are known about.
+
+- `Insider Threat` attacks occur when an employee, contractor, vendor, or other individual with authorized access to information and systems uses that access to wage an attack against the organization. Can be of any skill level. Motivations can vary greatly. They often work alone with limited financial backing. Behavioral assessments are powerful tools against insider attacks. `Shadow IT` is a threat here - employees using technology services that are not approved by their organization (usually without malicious intent).
+
+- `Competitors` may engage in corporate espionage.
+
+### Attacker Motivations
+
+Primary motivations behind cyber attacks include:
+
+- `Data exfiltration` - motivated by the desire to obtain sensitive or proprietary information.
+- `Espionage` - attacks motivated by organizations seeking to steal secret information.
+- `Service disruption` - attacks seek to interrupt critical networks (banking).
+- `Blackmail` - attacks to extort money or other concessions.
+- `Financial gain` - attacks motived by desire to make money.
+- `Philosophical/political belief` - ideology or political reasons.
+- `Ethical attacks` - desire to expose vulnerabilities and improve security.
+- `Revenge` - get even with an organization or for retribution.
+- `Disruption/chaos` - basic desire to cause chaos.
+- `War` - disrupt military operations or affect the outcome of a armed conflict.
+
+### Threat Vectors and Attack Surfaces
+
+Attackers must find a means to an organizations information or systems. First, they need an `attack surface` - a system, application, or service that contains a vulnerability to exploit. Then, they must get access by exploiting one of those vulnerabilities using a `threat vector`. Threat vectors are the means that threat actors use to obtain access.
+
+Security professionals are tasked with reducing the size and complexity of the attack surface.
+
+- `Message-Based Threat Vectors` - Email is the most commonly exploited threat vector. Success only needs to occur once in order to launch a broader attack. Attacks are not limited to email and can come through `SMS` or `IM`. Voice calls are another approach for vishing attacks. Social media is another approach to harvest information for use in other attacks.
+- `Wired Networks` - Gaining access to a orgs physical location. This can happen by them gaining access to a lobby and working on their laptops while connected to a wall jack. Or they can access a unsecured device.
+- `Wireless Networks` - unsecured or poorly secured wireless networks pose significant risk; this also includes bluetooth-enabled devices.
+- `Systems` - vulnerable software, unpatched operating systems, credentials that were never changed, legacy applications that are no longer supported.
+- `Files and Images` - files with embedded malicious code that activates a malware infection upon opening; often sent via email or placed somewhere.
+- `Removable Devices` - usb drives left in parking lots loaded with malware that launches when plugged in.
+- `Cloud` - any cloud services with security flaws, accidentally published API keys/passwords.
+- `Supply Chain` - attacking hardware, software, or service providers. This can include interfering with hardware/software in transit to the target.
