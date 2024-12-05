@@ -69,3 +69,38 @@
 `scp important.txt ubuntu@192.168.1.30:/home/ubuntu/transferred.txt` - transfer file to the other system
 
 `scp ubuntu@192.168.1.30:/home/ubuntu/documents.txt notes.txt` -transfer file from a system to yours.
+
+## Processes
+
+`ps` - view current processes
+
+`ps aux` - view processes run by other users and those that don't run from a session (i.e. system processes)
+
+`top` - shows real-time statistics about th eproccesses running on your system instead of a one-time view. Will refresh.
+
+`kill` - terminate a process along with the PID number
+
+    SIGTERM - kill the process, but allow it to do some cleanup
+    SIGKILL - kill the process, does do any cleanup
+    SIGSTOP - Stop/suspend a process
+
+`Ctrl + Z` will background a process.
+
+`fg` bring process to forground
+
+## Cron and Crontabs
+
+- - - - - command_to_execute
+
+---
+
+| | | | |
+| | | | +---- Day of the week (0 - 7) [0 and 7 both represent Sunday]
+| | | +------ Month (1 - 12)
+| | +-------- Day of the month (1 - 31)
+| +---------- Hour (0 - 23)
++------------ Minute (0 - 59)
+
+example:
+
+30 2 \* \* 1 /path/to/script.sh
