@@ -90,6 +90,8 @@
 
 ## Cron and Crontabs
 
+`crontab -e` - edit crontab
+
 - - - - - command_to_execute
 
 ---

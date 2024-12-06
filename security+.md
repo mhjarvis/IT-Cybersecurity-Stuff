@@ -198,3 +198,11 @@ Security professionals are tasked with reducing the size and complexity of the a
 - `Removable Devices` - usb drives left in parking lots loaded with malware that launches when plugged in.
 - `Cloud` - any cloud services with security flaws, accidentally published API keys/passwords.
 - `Supply Chain` - attacking hardware, software, or service providers. This can include interfering with hardware/software in transit to the target.
+
+## Threat Data and Intelligence
+
+`Threat Intelligence` is the set of activities and resources available to cybersecurity professionals seeking to learn about changes in the threat environment. This can also be used for `predictive analysis` to identify likely threats to an organization. `Vulnerability databases` also help a orgs threat intelligence program. `Indicators of Compromise (IoCs)` are telltale signs that an attack has taken place and may include file signatures, log patterns, and other evidence.
+
+### Open Source Intelligence
+
+`Open source threat intelligence` is aquired from publicly available sources.
