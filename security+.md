@@ -1,6 +1,6 @@
-# Security +
+<h1 style="text-align:center">Security +</h1>
 
-# I. Today's Security Professional
+<h1 style="text-align:center"> Chapter 1: Today's Security Professional</h1>
 
 ## Objectives of Cybersecurity
 
@@ -42,6 +42,8 @@ A security incident can impact an organization in several different ways. Risk c
 
 - `Compliance Risk` occurs when a breach causes a break in regulatory requirements (HIPPA, etc). This leads to sanctions and fines.
 
+---
+
 ## Implementing Security Controls
 
 An organization implements security controls to preserve the CIA triad. `Control Objectives` are statements of a desired security state an organization wishes to achieve. `Security Controls` are the actual measures that fulfill these security objectives.
@@ -78,6 +80,8 @@ Security controls are also divided into types based on their desired effects.
 
 - `Directive controls` inform employees and others what they should do to achieve security objectives (policies and procedures).
 
+---
+
 ## Data Protection
 
 Data exists at three main states.
@@ -93,6 +97,8 @@ Different security controls can be applied to help safeguard data in all of thes
 ### Data Encryption
 
 Use encryption to prevent information being exposed.
+
+---
 
 ### Data Loss Prevention
 
@@ -133,7 +139,9 @@ a, b, c, b, d, d, b, a, d, a, c, a, d, d, d, a, c, b, a, a
 
 d, b, c, b, d, d, b, a, d, a, c, a, d, d, d, a, c, b, a, a
 
-# II. Cybersecurity Threat Landscape
+---
+
+<h1 style="text-align:center">Chapter 2: Cybersecurity Threat Landscape</h1>
 
 ## Exploring Cybersecurity Threats
 
@@ -199,6 +207,8 @@ Security professionals are tasked with reducing the size and complexity of the a
 - `Cloud` - any cloud services with security flaws, accidentally published API keys/passwords.
 - `Supply Chain` - attacking hardware, software, or service providers. This can include interfering with hardware/software in transit to the target.
 
+---
+
 ## Threat Data and Intelligence
 
 `Threat Intelligence` is the set of activities and resources available to cybersecurity professionals seeking to learn about changes in the threat environment. This can also be used for `predictive analysis` to identify likely threats to an organization. `Vulnerability databases` also help a orgs threat intelligence program. `Indicators of Compromise (IoCs)` are telltale signs that an attack has taken place and may include file signatures, log patterns, and other evidence.
@@ -206,3 +216,223 @@ Security professionals are tasked with reducing the size and complexity of the a
 ### Open Source Intelligence
 
 `Open source threat intelligence` is aquired from publicly available sources.
+
+### Proprietary and Closed-Source Intelligence
+
+Can be currated open-source intel; often intel is collected using variety of tools that is unknown to outside actors. `Threat maps` may be an offering.
+
+### Assessing Threat Intelligence
+
+- Is the information timely?
+- Is the information accurate?
+- Is the information relevant?
+
+Many threat feeds will include a confidence rating along with a descriptive scale. E.g.: Confirmed, Propable, Possible, Doubtful, Improbable, Discredited.
+
+### Threat Indicator Management and Exchange
+
+`Structured Threat Information eXpression (STIX)` - an XML language allowing for threat information to be processed and used in automated ways.
+
+### Information Sharing Organizations
+
+### Conducting Your Own Research
+
+## Summary
+
+1. Threat actors differ in several key attributes - 4 major criteria - interal vs external, level of sophistication / capabilities, available resources / funding, motivations / levels of intent.
+2. Threat actors come from many different sources: unsophisticated, organized crime, advanced persistent threats, nation states.
+3. Attackers have varying motivations for attacks.
+4. Attackers exploit different vectors to gain intiial access to an organization.
+5. Threat intelligenve provides organizations with valuable insight into the threat landscape. This includes public/private sources, detailed indicators, closed source, etc.
+6. Security teams must monitor for supply chain risks.
+
+b, c, a, a, d, a, a, d, a, d, a, b, c, a, a, a, a, c, a & c, c
+
+b, c, a, a, d, a, a, d, a, d, a, b, c, a, b, a, a, c, a & C, c
+
+---
+
+<h1 style="text-align:center">Chapter 3: Malicious Code</h1>
+
+## Malware
+
+`Malware` describes a wide range of software that is intentionally designed to cause harm to systems and devices, networks, or users. It can gather information, provide illicit access, and various other actions. Know the following about the types of malware:
+
+a. Be familiar with each
+b. How to tell them apart
+c. How you can identify them
+d. Common techniques used in combatting them
+
+### Ransomware
+
+Malware that takes over a computer and demands a ransom. There are many types. Many are driven by phishing campaigns (installed via emails). Other attack methods stem from RDP (Remote Desktop Protocol).
+
+###### Variants:
+
+`Crypto malware` encrypts files for ransom. Others threaten to report the user to law enforcement. Others threaten to expose sensitive information or pictures.
+
+###### Indicators of Compromise:
+
+- Command and Control traffic and/or contact to known malicious IPs.
+- Use of legitimate tools in abnormal ways to retain control of the compromised system.
+- Lateral movement processes that seek to attack or gain information about other systems or devices inside the same trust boundaries.
+- Encryption of files.
+- Notices to end users of the encryption process / demand for ranson.
+- Data exfiltration behaviors, including large files.
+
+###### Defenses:
+
+- A backup system in a seperate location that will not be impacted by the ransomware.
+- Some tools may work as paying the ransom may work, but not guaranteed.
+
+---
+
+### Trojans
+
+Malware disguised as legitimate software. Once installed, information about the system is provided to a control server. Remote execution allows further actions. This can lead anywhere from ads being shown to someone signing up for paid susbscriptions.
+
+###### Variants
+
+`Remote Access Trojans (RATs)` provide attackers with remote access to a system. Legitimate access tools can be used making it difficult to detect.
+
+###### Indicators of Compromise
+
+- Signatures for the specific malware applications or downloaded files.
+- Command and control sysstem hostnames and IP addresses.
+- Folder or files created on target devices.
+
+###### Defenses
+
+- Security awareness training not to download untrusted software.
+- Antimalware / endpoint detection and response (EDR) tools which detect Trojan and RAT-like behavior.
+- Controlling software / applications a user can aquire.
+
+###### Additional Notes
+
+Many types of malware use C&C, allowing attackers to tell them what to do. These groups of systems are called `botnets` while individual systems are called `bots`. C&C uses encrypted HTTP connecting to a changing set of remote hosts to avoid observations. Another popular method is to use `Internet Relay Chat (IRC)` via port `6667`.
+
+---
+
+### Worms
+
+`Worms`, unlike trojans spread themselves. They can spread via email attachments, file shares, IoT and phones, etc. They also self-install, rather than requiring users to click on them.
+
+###### Variants
+
+###### Indicators of Compromise
+
+- Known malicious files.
+- Downloads of additional components from remote systems.
+- Command and conrtol contact to remote systems.
+- Maliscious behaviors using system commands for injection and other activities, including use of `cmd.exe`, `msiexec.exe`, and others.
+- Hands-on-keyboard attacker activity.
+
+###### Defenses
+
+- Firewalls, network segmentation, and Network-level controls. If compromised systems cannot communicate with other vulnerable devices, the infection cannot spread.
+- Patching and configuring services to limit attack surfaces.
+- Response with antimalware, EDR, and other tools to remove infection (may be impossible).
+
+---
+
+### Spyware
+
+`Spyware` is malware that is designed to obtain information about an individual, organization, or system. Many track users browsing habits, installed software, and report back to central servers. Some spyware is innocuous, but there are some that target sensitive data, allows remote access to web cameras, or provides other access to a system. Associated with identity fraud, advertising and redirection of traffic, DRM monitoring, and `stalkerware`, a type of spyware used to monitor partners and relationships.
+
+###### Variants
+
+###### Indicators of Compromise
+
+- Remote-access and remote-control-related indicators.
+- Known software file fingerprints.
+- Malicious processes, disguised as system processes.
+- Injection attacks against browsers.
+
+###### Defenses
+
+- Antimalware tools.
+- User awareness (don't install bad software / trojans).
+
+---
+
+### Bloatware
+
+Preinstalled applications on new computers is an example of `bloatware`. Usually installed by manufacturers, can come with installer packages for other applications. Usually, bloatware is not intentionally malicious, but may be poorly written and send system information. It may also be vulnerable to exploitation.
+
+###### Indicators of Compromise
+
+None really, other than taking up diskspace, and being installed on new systems or with new software.
+
+###### Defenses
+
+- Uninstall bloatware or use a clean system image.
+- User awareness.
+
+###### Additional Notes
+
+Bloatware can be confused with Spyware. The key difference is that Spyware's primary intention is to gather information about the user, their use of the system and Internet, and the configuration of the system.
+
+---
+
+### Viruses
+
+`Viruses` are malicious programs that self-copy and self-replicate once they are activated. Unlike worms, they do not spread themselves via vulnerable services and networks. They require one or more infection mechanisms to spread themselves. They typically have a `trigger`, setting the conditions for when they will execute. They also have a `payload`, which is what the virus does, delivers, or the actions it performs.
+
+###### Variants
+
+- `Memory-resident viruses` which remain in memory while the system is running.
+- `Non-memory-resident viruses` which execute, spread, and then shut down.
+- `Boot sector viruses`, which reside inside the boot sector of a drive or storage media.
+- `Macro viruses`, which use macros or code inside word processing software or other tools to spread.
+- `Email viruses`, which spread via email or attachments.
+- `Fileless virus attacks` require a vulnerability to succeed.
+
+###### Indicators of Compromise
+
+- Often found in threat feeds.
+
+###### Defenses
+
+- Ensuring browsers, plug-ins, and other software are updated.
+- Antimalware tools that can detect scripting tools.
+- Network level defenses (intrusion prevention systems) and reputation-based protection systems.
+- Awareness training.
+
+###### Additional Notes
+
+It is difficult to determine whether a infection has been completely wiped from a system. Therefore, most orgs will completely wipe the drive of a infected machine and restore it from a good backup or reinstalling/reimaging it. This, however, may not be possible if there is BIOS/UEFI resident malwrare.
+
+---
+
+### Keyloggers
+
+`Keyloggers` are programs that capture keystrokes from a keyboard (they may capture other information as well). They can capture from the kernel, via api scripts, or even directly from memory.
+
+###### Variants
+
+Aside from software-based keyloggers, there are also hardware-based keyloggers.
+
+###### Indicators of Compromise
+
+- File hashes and signatures.
+- Exfiltration activity to C&C systems.
+- Process names.
+- Known reference URLs.
+
+###### Defenses
+
+- Security best practices to ensure malware is not installed.
+- Patching and system management.
+- Antimalware tools.
+- Multifactor authentication to limit impact of stolen passwords.
+- Use of bootable USB drives to prevent use of compromised OS.
+
+### Logic Bombs
+
+`Logic Bombs` are not independent malicious programs. They are functions or code placed inside of other programs that will activate when set conditions are met.
+
+###### Variants
+
+###### Indicators of Compromise
+
+###### Defenses

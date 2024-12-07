@@ -31,3 +31,15 @@ The System32 folder holds the important files that are critical for the operatin
 `compmgmt` - utility that controls System Tools, Storage, and Services and Applications.
 
 `resmon` - Resource monitor
+
+## Command Prompt
+
+`hostname` - computer name
+`whoami` - logged in user
+`ipconfig` - shows network address settings for the computer
+`/?` - retrieve help manual for a command
+`cls` - clear screen
+`netstat` - displays protocol statistics and current TCP/IP network connections
+`net` - used to manage network resources
+
+`regedit` - windows register
