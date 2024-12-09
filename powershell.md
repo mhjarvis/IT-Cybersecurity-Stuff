@@ -70,8 +70,26 @@ Powershell commands are known as `cmdlets` (command-lets). They follow a Verb-No
 
 `Get-NetIPAddress` - shows details fora ll IP addresses configured on the system.
 
+## System Analysis
+
+`Get-Process` - provides a detailed view of all currently running processes, including CPU and memory usage.
+
+`Get-Service` - allows the retrieval of information about the status of services on teh machine.
+
+`Get-NetTCPConnection` - displays current TCP connections.
+
+`Get-FileHash` - generating file hashes.
+
+## Scripting
+
+`Invoke-Command` - for executing commands on remote systems.
+
+## Other
+
 `-ep Bypass -nop` - these flags disable PowerShell's usual restrictions, allowing scripts to run without interference from security settings or user profiles.
 
 `DownloadFile` - method that pulls a file from a remote server.
 
 `iex` - executes a script.
+
+##
