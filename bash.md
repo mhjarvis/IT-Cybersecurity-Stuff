@@ -1,4 +1,6 @@
-# Linux Commands
+# Bash (Bourne Again Shell)
+
+## Types of Shells
 
 ## Filesystem Interaction
 
@@ -106,3 +108,9 @@
 example:
 
 30 2 \* \* 1 /path/to/script.sh
+
+## Other Commands
+
+`echo $SHELL` - see which shell you are using.
+
+`cat /etc/shells` - see which shells are available to you.
