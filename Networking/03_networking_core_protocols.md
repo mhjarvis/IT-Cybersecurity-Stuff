@@ -10,3 +10,30 @@ The Domain Name System (DNS) is responsible for mapping a domain name to an IP a
 2. `AAAA Record` - similar to `A record` but it is meant for IPv6.
 3. `CNAME Record` - maps a domain name to another domain name. For example, www.ex.com can be mapped to ex.com or ex.org.
 4. `MX Record` - The Mail Exchange record specifies the mail server responsible for handling emails for a domain.
+
+## WHOIS
+
+`whois _address` - command will allow you to find out registrar information.
+
+## HTTP(S)
+
+Common commands/methods
+
+`GET`, `POST`, `PUT`, `DELETE`.
+
+## FTP
+
+FTP listens on port 21 by default.
+
+`USER` - used to input the username.
+`PASS` - used to enter the password.
+`RETR` - used to download file from the FTP server to client.
+`STOR` - used to upload file from client to FTP server.
+
+```bash
+ftp ip_address                          // connect to server via ftp
+```
+
+FTP file transfers are saved to the directory FTP was launched from.
+
+## SMTP

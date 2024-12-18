@@ -123,3 +123,5 @@ GET / HTTP/1.1                                      // issue command
 Host: telnet.thm                                    // identify host where anything goes
                                                     // press enter twice
 ```
+
+`GET /file.html` may also work depending on type of server.
