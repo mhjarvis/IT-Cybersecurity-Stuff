@@ -125,3 +125,40 @@ Host: telnet.thm                                    // identify host where anyth
 ```
 
 `GET /file.html` may also work depending on type of server.
+
+## POP3
+
+Connect via telnet `telnet ip_address 110`.
+
+`USER` <username> identifies the user
+`PASS` <password> provides the user’s password
+`STAT` requests the number of messages and total size
+`LIST` lists all messages and their sizes
+`RETR` <message_number> retrieves the specified message
+`DELE` <message_number> marks a message for deletion
+`QUIT` ends the POP3 session applying changes, such as deletions
+
+## IMAP: Synchronizing Email
+
+The Internet Message Access Protocol (IMAP) is a protocol for receiving email. Protocols standardize technical processes so computers and servers can connect with each other regardless of whether or not they use the same hardware or software.
+
+The IMAP protocol commands are more complicated than the POP3 protocol commands. We list a few examples below:
+
+`A LOGIN <username> <password> `authenticates the user
+`B SELECT <mailbox>` selects the mailbox folder to work with
+`C FETCH <mail_number> <data_item_name>` Example fetch 3 body[] to fetch message number 3, header and body.
+`MOVE <sequence_set> <mailbox>` moves the specified messages to another mailbox
+`COPY <sequence_set> <data_item_name>` copies the specified messages to another mailbox
+`LOGOUT` logs out
+
+Connect via telnet `telnet ip_address 143`.
+
+Protocol Transport Protocol Default Port Number
+TELNET TCP 23
+DNS UDP or TCP 53
+HTTP TCP 80
+HTTPS TCP 443
+FTP TCP 21
+SMTP TCP 25
+POP3 TCP 110
+IMAP TCP 143
