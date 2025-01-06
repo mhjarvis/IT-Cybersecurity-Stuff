@@ -222,3 +222,177 @@ Start scanning and analyze the results to understand service configurations and 
 | `-Pn`      | Scans hosts marked as down during host discovery.          |
 
 For detailed information, refer to [Nmap's official documentation](https://nmap.org).
+
+# Nmap: Controlling Scan Speed and Timing
+
+## Timing Templates
+
+- **Purpose**: Adjust the speed of scans to evade Intrusion Detection Systems (IDS) or adapt to network conditions.
+- **Command**: `nmap -T<0-5> [target]`
+  - **T0 (Paranoid)**: Slowest, waits several minutes between probes. Ideal for evading detection.
+  - **T1 (Sneaky)**: Slower timing, ~15 seconds between probes.
+  - **T2 (Polite)**: Moderate, ~0.4 seconds between probes. Reduces network load.
+  - **T3 (Normal)**: Default setting, balances speed and reliability.
+  - **T4 (Aggressive)**: Faster scans, suitable for reliable and fast networks.
+  - **T5 (Insane)**: Fastest but risks packet loss and detection by IDS.
+
+### Timing Examples
+
+| **Timing** | **Total Duration**     |
+| ---------- | ---------------------- |
+| `T0`       | 9.8 hours              |
+| `T1`       | 27.53 minutes          |
+| `T2`       | 40.56 seconds          |
+| `T3`       | 0.15 seconds (default) |
+| `T4`       | 0.13 seconds           |
+
+---
+
+## Parallelism Options
+
+- **Command**:
+  - `--min-parallelism <numprobes>`
+  - `--max-parallelism <numprobes>`
+- **Description**: Controls the number of active port probes for a host group.
+  - If the network is **slow**, probes reduce to one.
+  - If the network is **fast**, probes can scale to several hundred.
+
+---
+
+## Rate Options
+
+- **Command**:
+  - `--min-rate <number>`
+  - `--max-rate <number>`
+- **Description**: Sets the minimum/maximum number of packets sent per second.
+  - Rate applies to the entire scan, not individual hosts.
+  - Useful for fine-tuning scan performance in varying network conditions.
+
+---
+
+## Host Timeout
+
+- **Command**: `--host-timeout <time>`
+- **Description**: Sets the maximum duration to wait for responses from a target host.
+  - Helpful for skipping slow hosts and optimizing scan time.
+
+---
+
+## Summary Table of Key Options
+
+| **Option**                                | **Purpose**                                       |
+| ----------------------------------------- | ------------------------------------------------- |
+| `-T<0-5>`                                 | Timing template: control scan speed.              |
+| `--min-parallelism` / `--max-parallelism` | Minimum and maximum number of active probes.      |
+| `--min-rate` / `--max-rate`               | Minimum and maximum rate of packets (per second). |
+| `--host-timeout`                          | Maximum duration to wait for a response.          |
+
+For more details, refer to [Nmap's official documentation](https://nmap.org).
+
+# Nmap: Verbosity, Debugging, and Saving Scan Reports
+
+## Verbosity and Debugging
+
+### Verbose Output (`-v`)
+
+- **Purpose**: Provides real-time updates during a scan.
+- **Usage**: Add `-v` to your Nmap command for basic verbosity.
+  - Example: `nmap -v <target>`
+- **Levels**: Increase verbosity by adding more "v"s (e.g., `-vv`, `-vvvv`) or by specifying the level directly (e.g., `-v2`, `-v4`).
+  - Real-time adjustment: Press `v` during an active scan to increase verbosity.
+
+### Debugging Output (`-d`)
+
+- **Purpose**: Displays in-depth details about the scan process for troubleshooting.
+- **Usage**: Add `-d` for debugging-level output.
+  - Example: `nmap -d <target>`
+- **Levels**: Increase debugging output by adding more "d"s (e.g., `-dd`, `-ddd`) or specifying the level directly (e.g., `-d3`, `-d9`).
+  - Maximum level: `-d9` (thousands of lines of debug data).
+
+---
+
+## Saving Scan Reports
+
+Nmap offers several output formats to save scan results:
+
+- **Normal Output (`-oN <filename>`)**: Human-readable format.
+  - Example: `nmap -oN scan.txt <target>`
+- **XML Output (`-oX <filename>`)**: Machine-readable XML format.
+  - Example: `nmap -oX scan.xml <target>`
+- **Grepable Output (`-oG <filename>`)**: Output designed for use with `grep` or `awk`.
+  - Example: `nmap -oG scan.gnmap <target>`
+- **All Formats (`-oA <basename>`)**: Saves in all three formats with the base name provided.
+  - Example: `nmap -oA scan <target>`
+  - Output: Produces files `scan.nmap`, `scan.xml`, and `scan.gnmap`.
+
+---
+
+## Summary Table
+
+| **Option**  | **Explanation**                                 |
+| ----------- | ----------------------------------------------- |
+| `-v`, `-vv` | Verbose output; real-time scan updates.         |
+| `-d`, `-d9` | Debugging output; detailed internal processes.  |
+| `-oN`       | Save as normal (human-readable) output.         |
+| `-oX`       | Save as XML (machine-readable) output.          |
+| `-oG`       | Save as grepable output for further processing. |
+| `-oA`       | Save in all major formats.                      |
+
+---
+
+### Example Command:
+
+```bash
+nmap -v -oA scan_results <target>
+```
+
+# Summary of Nmap Features and Usage
+
+## Key Takeaways
+
+- **Live Host Discovery**: Learn to identify active devices on any network.
+- **Port Scanning**: Understand and apply various types of scans to find open ports and services.
+- **Service Version Detection**: Use Nmap to reveal the versions of services running on open ports.
+- **Scan Timing**: Optimize scans by adjusting timing templates and controlling probe rates.
+- **Report Formats**: Save scan results in multiple formats for analysis.
+
+---
+
+## Importance of Running Nmap with `sudo`
+
+- Running with **sudo** provides full access to Nmap's features, such as:
+  - TCP SYN Scan (`-sS`): Requires root privileges to craft raw packets.
+  - Non-root users default to TCP Connect Scan (`-sT`), which is less efficient.
+
+---
+
+## Nmap Options Reference Table
+
+| **Category**          | **Option**                  | **Description**                                             |
+| --------------------- | --------------------------- | ----------------------------------------------------------- |
+| **Host Discovery**    | `-sL`                       | List scan – lists targets without scanning.                 |
+|                       | `-sn`                       | Ping scan – discovers hosts without port scanning.          |
+| **Port Scanning**     | `-sT`                       | TCP Connect Scan – completes the three-way handshake.       |
+|                       | `-sS`                       | TCP SYN Scan – sends only the SYN packet (requires `sudo`). |
+|                       | `-sU`                       | UDP Scan – checks for open UDP ports.                       |
+|                       | `-F`                        | Fast mode – scans the 100 most common ports.                |
+|                       | `-p[range]`                 | Specifies a port range; `-p-` scans all ports.              |
+|                       | `-Pn`                       | Treats all hosts as online, bypassing host discovery.       |
+| **Service Detection** | `-sV`                       | Detects versions of services running on open ports.         |
+|                       | `-O`                        | OS detection.                                               |
+|                       | `-A`                        | Comprehensive detection: OS, versions, and other details.   |
+| **Timing**            | `-T<0-5>`                   | Timing templates: 0 (paranoid) to 5 (insane).               |
+|                       | `--min-rate` / `--max-rate` | Minimum/maximum rate of probes per second.                  |
+|                       | `--host-timeout`            | Max wait time for a target host.                            |
+| **Output**            | `-oN <filename>`            | Normal (human-readable) output.                             |
+|                       | `-oX <filename>`            | XML output for machine processing.                          |
+|                       | `-oG <filename>`            | Grepable output for `grep`/`awk`.                           |
+|                       | `-oA <basename>`            | Saves output in all formats (normal, XML, grepable).        |
+
+---
+
+### Recommended Learning Path
+
+- Nmap is a powerful tool with many features. Beyond the basics covered here, further learning can be pursued in the **Network Security module**, which includes four dedicated rooms to explore advanced Nmap functionalities.
+
+For more in-depth details, visit the [official Nmap documentation](https://nmap.org/docs.html).
