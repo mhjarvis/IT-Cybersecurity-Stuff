@@ -9,6 +9,7 @@
 
 1. [hashID](https://pypi.org/project/hashID/) - not always relyable.
 2. [Hashcat Example Hashes](https://hashcat.net/wiki/doku.php?id=example_hashes)
+3. [hash-identifier](https://gitlab.com/kalilinux/packages/hash-identifier/-/tree/kali/master) - Python tool.
 
 ## Password Cracking
 
