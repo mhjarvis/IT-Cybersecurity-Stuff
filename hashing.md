@@ -21,6 +21,11 @@ Use thse with the rockyou.txt password list.
 
 On Linux, password hashes are stored in `/etc/shadow` (usually only readable by root). They used to be stored in `/etc/passwd` which was readable by everyone.
 
+## John the Ripper
+
+john --format=[format] --wordlist=[path to wordlist] [path to file]
+john --list=formats
+
 - **The Shadow File**:
 
   - Contains password information.
